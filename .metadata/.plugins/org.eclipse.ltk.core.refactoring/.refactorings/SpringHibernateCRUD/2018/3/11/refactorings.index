@@ -1,0 +1,16 @@
+1521202925967	Rename source folder 'src/main/resources'
+1521203970184	Delete element
+1521205996933	Delete element
+1521206026134	Rename package 'controller'
+1521206043103	Rename package 'dao'
+1521206056171	Rename package 'model'
+1521206072436	Rename package 'service'
+1521206415135	Delete element
+1521207145612	Rename compilation unit 'EmployeeServiceImpl.java'
+1521207168244	Delete element
+1521208749812	Rename resource 'index.jsp'
+1521226447225	Move 'home.jsp' to 'views'
+1521226466244	Move 'home.jsp' to 'webapp'
+1521226477807	Delete element
+1521226496941	Move 'EmployeeForm.jsp' to 'views'
+1521226500966	Move 'home.jsp' to 'views'

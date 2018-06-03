@@ -1,0 +1,196 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.scp.springmvc</groupId>
+	<artifactId>FirstSpringMVCApp</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>FirstSpringMVCApp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<spring.version>4.1.5.RELEASE</spring.version>
+		<hibernate.version>4.3.8.Final</hibernate.version>
+
+		<junit-version>4.11</junit-version>
+		<servlet-api-version>3.1.0</servlet-api-version>
+		<jsp-version>2.1</jsp-version>
+		<jstl-version>1.2</jstl-version>
+		<java.version>1.7</java.version>
+
+	</properties>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/cn.easyproject/ons -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-site-plugin</artifactId>
+  <version>3.7.1</version>
+  <type>maven-plugin</type>
+</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Hibernate 4 dependencies -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!--MYSQL Connector -->
+
+		<!-- Servlet and JSP -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet-api-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- JSTL dependency -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl-version}</version>
+		</dependency>
+
+		<!-- JUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+
+
+	<build>
+		<finalName>FirstSpringMVCApp</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+			</plugin>
+
+
+			<!-- Eclipse project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<!-- Always download and attach dependencies source code -->
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
+					<wtpversion>2.0</wtpversion>
+				</configuration>
+			</plugin>
+
+			<!-- Set JDK Compiler Level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+
+			<!-- For Maven Tomcat Plugin -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/FirstSpringMVCApp</path>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+	 
+	<reporting>
+		<plugins>
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-javadoc-plugin</artifactId>
+    				<version>2.10.3</version>
+			</plugin>
+			
+		</plugins>
+	</reporting>
+</project>

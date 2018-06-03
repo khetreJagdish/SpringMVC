@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename source folder &apos;com.scp.springjdbc/src/main/resources&apos; to &apos;java&apos;&#x0D;&#x0A;- Original project: &apos;com.scp.springjdbc&apos;&#x0D;&#x0A;- Original element: &apos;com.scp.springjdbc/src/main/resources&apos;&#x0D;&#x0A;- Renamed element: &apos;resources&apos;" description="Rename source folder &apos;src/main/resources&apos;" id="org.eclipse.jdt.ui.rename.source.folder" input="/src\/main\/resources" name="java" stamp="1524252327242" version="1.0"/>
+</session>

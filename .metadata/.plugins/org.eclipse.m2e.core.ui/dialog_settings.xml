@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\JK\Desktop\javaspringmvc"/>
+			<item value="D:\javaspringmvc"/>
+			<item value="F:\WORKSPACES\SpringMVCWorkSpace\javaspringmvc"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="F:\WORKSPACES\SpringMVCWorkSpace\DesignPattern"/>
+			<item value="F:\WORKSPACES\SpringMVCWorkSpace\SpringMVCJSONDemo"/>
+			<item value="C:\Users\JK\Desktop\springHibernateApp"/>
+			<item value="F:\WORKSPACES\SpringMVCWorkSpace\SpringHibernateCRUD"/>
+			<item value="F:\WORKSPACES\SpringMVCWorkSpace\FirstSpringMVCApp\src\main\webapp\WEB-INF\web.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.scp.springdemo"/>
+			<item value="com.scp.springdemo.com.scp.springjdbc"/>
+			<item value="com.scp.springdemo.LookupMethodDemo"/>
+		</list>
+		<list key="groupId">
+			<item value="com.scp.springdemo"/>
+		</list>
+		<list key="artifactId">
+			<item value="SpringJdbcTemplate"/>
+			<item value="com.scp.springjdbc"/>
+			<item value="SpringJDBCDemo"/>
+			<item value="BeanLifeCycle"/>
+			<item value="DesignPattern"/>
+			<item value="LookupMethodDemo"/>
+			<item value="SpringHibernateMVCCRUD"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,112 @@
+package com.scp.singleton;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.lang.reflect.Constructor;
+
+/**
+ *  one can classify Java Singleton implementation into the following categories:
+ *  	
+ *  	1) Eager Initialization
+ *		2) Static Block Initialization
+ *		3) Lazy Initialization
+ *		4) Thread Safe Singleton
+ * 		
+ * 		1) Eager Initialization
+ * 		- In eager initialization, the singleton instance is created at the time of loading class loading. 
+ *        This is the easiest way to create the singleton instance for your singleton class. 
+ *        But, the main drawback of this approach is that the instance will be created even though it is not used by any of the client application. 
+ *        In this approach, you have to just create instance in the static variable declaration.  This approach doesn’t provide any option for exception handling.
+ * 		
+ * 		- Reflection
+ *              - But by using this approach we can create yet another instance by Using Reflection mechanism and hence
+ *					this approach is not safe.
+ *				- that means we have successfully break the Singleton rule using Reflection.
+ *		
+ *
+ *		-Serialization/Deserialization
+ *              -
+ * 
+ * 
+ * 			Example : Using Eager Initialization
+ * 
+ * */
+
+
+ class MyConnection implements Serializable,Cloneable
+{
+    private static MyConnection connection = new MyConnection();  // Eager Loading
+    
+    private MyConnection() {
+    	//to restrict Reflection Mechanism to create yet another instance even if it's available
+    	if(null != connection) {
+    		throw new RuntimeException("You can't Create another Instance , Use already Created...");
+    	}
+    		System.out.println("Creating instance...");
+    }
+    
+    public static MyConnection getMyConnection() {
+    	return connection;
+    }
+    
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+    	return super.clone();
+    }
+}
+
+public class EagerInitialization {
+	
+	public static void main(String[] args) throws Exception{
+		
+		System.out.println("----------------------Break Singleton Rule using Reflecton Mechanism---------------------");
+		Class clazz = Class.forName("com.scp.singleton.MyConnection");
+		Constructor<MyConnection> constructor = clazz.getDeclaredConstructor();
+		constructor.setAccessible(true);
+		MyConnection myConnection3 = constructor.newInstance();
+		System.out.println("Connection3 hashcode By using Constructor (Reflection Mechanism) : "+myConnection3.hashCode());
+	System.out.println();
+		
+		MyConnection connection1 = MyConnection.getMyConnection();
+		MyConnection connection2 = MyConnection.getMyConnection();
+		
+		if (connection1 == connection2) {
+			System.out.println("Both the references are pointing to the same object ");
+		} else {
+			System.out.println("Objects are not equal");
+		}
+		System.out.println("Connection1 hashcode : "+connection1.hashCode());
+		System.out.println("Connection2 hashcode : "+connection2.hashCode());
+		System.out.println();
+		// How we can we (i.e. we can break Singleton Rule ) create another instance By using Reflecton Mechanism
+		// is shown as below
+		
+	
+	/*// Break Singleton Rule using Serialization/Deserialization
+		System.out.println("----------------------Break Singleton Rule using Serialization/Deserialization---------------------");
+		File file = new File("connection.ser");
+		ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("file"));
+		outputStream.writeObject(connection2);
+		
+		ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("file"));
+		MyConnection myConnection =(MyConnection)inputStream.readObject();
+		System.out.println("Connection3 hashcode By using Serialization / Deserialization Mechanism : "+myConnection.hashCode());
+	
+		System.out.println();
+		System.out.println("----------------------Break Singleton Rule using clone---------------------");
+		MyConnection myConnection2 =(MyConnection) connection2.clone();
+		System.out.println("Connection3 hashcode By using clonning : "+myConnection2.hashCode());*/
+	}
+	
+	
+	
+	
+}
+
+
+
+

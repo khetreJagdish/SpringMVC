@@ -1,0 +1,8 @@
+com\scp\service\UserService.class
+com\scp\controllers\UserController.class
+com\scp\entities\UserEntity.class
+com\scp\dao\impl\UserDaoImpl.class
+com\scp\beans\UserBean.class
+com\scp\service\impl\UserServiceImpl.class
+com\scp\utilities\SessionFactoryUtil.class
+com\scp\user\dao\UserDao.class
