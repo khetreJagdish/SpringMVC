@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.scp.springwiththreading</groupId>
+  <artifactId>SpringWithJavaThread</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>SpringWithJavaThread Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+ 	<properties>
+        <spring.version>4.1.5.RELEASE</spring.version>        
+        <java.version>1.7</java.version>
+    </properties>
+ 		<dependencies>
+ 		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        </dependencies>
+  <build>
+    <finalName>SpringWithJavaThread</finalName>
+  </build>
+</project>
